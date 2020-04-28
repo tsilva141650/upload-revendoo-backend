@@ -12,7 +12,7 @@ const UsuarioSchema = new Schema({
     cpf:{
         type:Number,
         required: true,
-    },
+    },/*
     datanascimento:{
         type:Date,
         required: true,
@@ -36,7 +36,7 @@ const UsuarioSchema = new Schema({
     telefone:{
         type: Number,
         required: true,
-    },
+    },*/
     senha:{
         type: String,
         required: true,
