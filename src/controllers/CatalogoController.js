@@ -1,6 +1,7 @@
 const axios = require('axios');
 const Catalogo = require('../models/Catalogo');
-/*
+const Usuario = require('../models/Usuario');
+
 module.exports ={
  
     async index(req,res){
@@ -21,12 +22,13 @@ module.exports ={
     },
     
 
-    //criacao usuario
+    //criacao catalogo
     async store(req,res){
        
         const {name, produtos} = req.body;
         const {usuario} = req.headers;
 
+        
         const loggedUsuario = await Usuario.findById(usuario);
 
         const catalogo = await Catalogo.create({
@@ -38,4 +40,4 @@ module.exports ={
         return res.json(catalogo);
     }
 
-}*/
+}
