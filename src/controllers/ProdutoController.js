@@ -1,5 +1,4 @@
 const axios = require('axios');
-const Catalogo = require('../models/Catalogo');
 const Produto = require('../models/Produto');
 /*
 module.exports ={

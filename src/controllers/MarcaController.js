@@ -1,20 +1,20 @@
 const axios = require('axios');
-const Catalogo = require('../models/Catalogo');
+const Marca = require('../models/Marca');
 //const Usuario = require('../models/Usuario');
 
 module.exports ={
  
     async index(req,res){
         
-        const {catalogo} = req.headers;
+        const {marca} = req.headers;
 
-        const _catalogo = await Catalogo.findById(catalogo);
+        const _marca = await Marca.findById(marca);
 
-        if(!_catalogo){
+        if(!_marca){
             return res.status(400).json({error:'Não existe catalogo para este usuário.'});
         }
 
-        return res.json(_catalogo);
+        return res.json(_marca);
     },
     
 
@@ -27,13 +27,13 @@ module.exports ={
         
         //const loggedUsuario = await Usuario.findById(usuario);
 
-        const catalogo = await Catalogo.create({
+        const marca = await Marca.create({
             name, produtos
         });
 
         //loggedUsuario.catalogos.push(catalogo._id);
 
-        return res.json(catalogo);
+        return res.json(marca);
     }
 
 }
