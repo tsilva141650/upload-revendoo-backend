@@ -1,6 +1,6 @@
 const axios = require('axios');
 const Catalogo = require('../models/Catalogo');
-
+/*
 module.exports ={
  
     async index(req,res){
@@ -38,4 +38,4 @@ module.exports ={
         return res.json(catalogo);
     }
 
-}
+}*/

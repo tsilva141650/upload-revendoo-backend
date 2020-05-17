@@ -7,10 +7,10 @@ const routes = express.Router();
 
 // get
 routes.get('/usuario',UsuarioController.index);
-routes.get('/catalogo',CatalogoController.index);
+//routes.get('/catalogo',CatalogoController.index);
 
 //post
 routes.post('/usuario',UsuarioController.store);
-routes.post('/catalogo',CatalogoController.store);
+//routes.post('/catalogo',CatalogoController.store);
 
 module.exports = routes;
