@@ -8,7 +8,7 @@ const CatalogoSchema = new Schema({
     produtos:[{
         type: Schema.Types.ObjectId,
         ref:'Produto',
-    }]
+    }],
 
 },{
     timestamps:true,
