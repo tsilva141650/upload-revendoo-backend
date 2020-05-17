@@ -5,10 +5,10 @@ const CatalogoSchema = new Schema({
         type: String,
         required:true,
     },
-    produtos:[{
+    /*produtos:[{
         type: Schema.Types.ObjectId,
         ref:'Produto',
-    }],
+    }],*/
 
 },{
     timestamps:true,
