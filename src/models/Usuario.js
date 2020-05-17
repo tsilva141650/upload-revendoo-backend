@@ -12,7 +12,12 @@ const UsuarioSchema = new Schema({
     cpf:{
         type:Number,
         required: true,
-    },/*
+    },
+    catalogos:[{
+        type: Schema.Types.ObjectId,
+        ref:'Catalogo',
+    }],
+    /*
     datanascimento:{
         type:Date,
         required: true,

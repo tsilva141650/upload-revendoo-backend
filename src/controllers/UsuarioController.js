@@ -26,7 +26,7 @@ module.exports ={
     //criacao usuario
     async store(req,res){
        
-        const {name, email, cpf,datanascimento,cep,endereco,numero,complemento,telefone,senha} = req.body;
+        const {name, email, cpf,datanascimento,cep,endereco,numero,complemento,telefone,catalogos,senha} = req.body;
         //{"name":"Tiago Silva", "email":"tiago.ap.silva84@gmail.com", "cpf":"32489031805","datanascimento":"1984-11-11","cep":"18046595","endereco":"João Wagner Wey","numero":"1565","complemento":"Bloco 14 ap 101","telefone":"15996774321","senha":"123"}
         
         const userExists = await Usuario.findOne({cpf: cpf});//procura se tem usuario repetido
@@ -36,7 +36,7 @@ module.exports ={
         }
         
         const usuario = await Usuario.create({
-            name, email, cpf,datanascimento,cep,endereco,numero,complemento,telefone,senha
+            name, email, cpf,datanascimento,cep,endereco,numero,complemento,telefone,catalogos,senha
         })
         return res.json(usuario);
     }
