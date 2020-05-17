@@ -28,7 +28,7 @@ module.exports ={
         //const loggedUsuario = await Usuario.findById(usuario);
 
         const catalogo = await Catalogo.create({
-            name//, produtos
+            name, produtos
         });
 
         //loggedUsuario.catalogos.push(catalogo._id);
