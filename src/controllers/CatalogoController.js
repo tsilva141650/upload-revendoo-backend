@@ -12,7 +12,7 @@ module.exports ={
             $and:[
                 { _id:{$eq:catalogo}}, 
             ],
-        })
+        });
 
         if(!catalogos){
             return res.status(400).json({error:'Não existe catalogo para este usuário.'});
@@ -33,7 +33,7 @@ module.exports ={
 
         const catalogo = await Catalogo.create({
             name, produtos
-        })
+        });
 
         loggedUsuario.catalogos.push(catalogo._id);
 
