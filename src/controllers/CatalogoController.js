@@ -25,19 +25,16 @@ module.exports ={
     async store(req,res){
        
         const {name, produtos} = req.body;
-        //{"name":"Avon", "produtos":[]}
+        const {usuario} = req.headers;
         
-        /*
-        const catalogoExists = await Catalogo.findOne({name: name});//procura se tem um nome repetido
-
-        if(catalogoExists){
-            return res.json({"error:":"Catalogo já existe"});
-        }
-        */
+        const loggedUsuario = await Usuario.findById(usuario);
 
         const catalogo = await Catalogo.create({
             name, produtos
         })
+
+        loggedUsuario.catalogos.push(catalogo._id);
+
         return res.json(catalogo);
     }
 
