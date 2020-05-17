@@ -3,7 +3,7 @@ const Catalogo = require('../models/Catalogo');
 
 module.exports ={
  
-    async index(catalogo){
+    async index(req,res){
         
         const {catalogo} = req.headers;
         
@@ -26,7 +26,7 @@ module.exports ={
        
         const {name, produtos} = req.body;
         const {usuario} = req.headers;
-        
+
         const loggedUsuario = await Usuario.findById(usuario);
 
         const catalogo = await Catalogo.create({
