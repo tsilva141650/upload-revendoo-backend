@@ -1,7 +1,7 @@
 const axios = require('axios');
 const Catalogo = require('../models/Catalogo');
 const Produto = require('../models/Produto');
-
+/*
 module.exports ={
  
     async index(req,res){
@@ -26,7 +26,7 @@ module.exports ={
     async store(req,res){
        
         const {name, marca,descricao,preco_custo,preco_venda,qtd,validade} = req.body;
-        const {usuario} = req.headers;
+        //const {usuario} = req.headers;
 
         
         const catalogo = await Catalogo.findById(marca);
@@ -40,4 +40,4 @@ module.exports ={
         return res.json(produto);
     }
 
-}
+}*/
