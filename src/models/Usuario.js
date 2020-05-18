@@ -17,6 +17,16 @@ const UsuarioSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref:'Catalogo',
     }],
+    
+    clientes:[{
+        type: Schema.Types.ObjectId,
+        ref:'Clientes',
+    }],
+
+    pedidos:[{
+        type: Schema.Types.ObjectId,
+        ref:'Pedido',
+    }],
     /*
     datanascimento:{
         type:Date,

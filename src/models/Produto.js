@@ -1,14 +1,14 @@
 const {Schema, model} = require('mongoose');
 
-const PrdoutoSchema = new Schema({
+const ProdutoSchema = new Schema({
     name:{
         type: String,
         required:true,
     },
-    /*marca:{
+    marca:{
         type: Schema.Types.ObjectId,
         ref:'Catalogo',
-    },*/
+    },
     descricao:{
         type: String,
         required:true,
